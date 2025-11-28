@@ -1,0 +1,264 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f9f9f9;
+}
+
+header {
+    background: linear-gradient(135deg, #6a89cc, #4a69bd);
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+/* Стили для слайдера */
+.gallery-section {
+    text-align: center;
+}
+
+.gallery-container {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.slide.active {
+    display: flex;
+}
+
+.slide img {
+    width: 100%;
+    max-width: 600px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.photo-name {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #666;
+    font-weight: 500;
+}
+
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(74, 105, 189, 0.8);
+    color: white;
+    border: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.nav-btn:hover {
+    background: rgba(74, 105, 189, 1);
+    transform: translateY(-50%) scale(1.1);
+}
+
+.prev-btn {
+    left: 20px;
+}
+
+.next-btn {
+    right: 20px;
+}
+
+.dots-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #4a69bd;
+    transform: scale(1.2);
+}
+
+.dot:hover {
+    background: #6a89cc;
+}
+
+.controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#autoPlayBtn {
+    background: #4a69bd;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+#autoPlayBtn:hover {
+    background: #6a89cc;
+}
+
+#speedSelect {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+/* Остальные стили остаются без изменений */
+.text-content h2 {
+    color: #4a69bd;
+    margin-bottom: 1rem;
+}
+
+.text-content p {
+    margin-bottom: 1rem;
+}
+
+.warning {
+    background-color: #fff9e6;
+    border-left: 4px solid #ffc107;
+}
+
+.warning h3 {
+    color: #e0a800;
+}
+
+.facts ul {
+    list-style-type: none;
+}
+
+.facts li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.routine-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.routine-item {
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    border-left: 4px solid #4a69bd;
+}
+
+.routine-item h4 {
+    color: #4a69bd;
+    margin-bottom: 0.5rem;
+}
+
+.hobbies ul {
+    list-style-type: none;
+    margin-bottom: 1rem;
+}
+
+.hobbies li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.signature {
+    font-style: italic;
+    text-align: right;
+    color: #666;
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #4a69bd;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .slide img {
+        height: 300px;
+    }
+    
+    .nav-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+    }
+    
+    .controls {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
